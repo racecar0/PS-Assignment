@@ -8,6 +8,7 @@ const check_expr = (obj, object_name, property_name, operator, right_value) => {
 };
 
 describe('Module 01 - Game Loop', () => {
+	//Check reference of the external script for Createjs library
 	it('Reference an external script @external-script', () => {
 		const srcs = $('script')
 			.map(function(i, el) {
@@ -23,7 +24,7 @@ describe('Module 01 - Game Loop', () => {
 			'Did you add a `script` tag for the `app.js` file?'
 		);
 	});
-
+	//Check for an event listener for DOMContentLoaded
 	it('Listen for DOMContentLoaded @ilsten-domcontentloaded', () => {
 		assert(
 			astq.query(
@@ -40,6 +41,7 @@ describe('Module 01 - Game Loop', () => {
 			'Do you have an event listner that is listening for the `DOMContentLoaded` event.'
 		);
 	});
+	//Check for key code constants for left, up, right, down
 	it('Key code constants @keycode-constants', () => {
 		assert(
 			astq.query(
@@ -98,6 +100,7 @@ describe('Module 01 - Game Loop', () => {
 			'Do you have a constant called `KEYCODE_DOWN` set equal to `40`?'
 		);
 	});
+	//Check for stage creation
 	it('Create a stage @create-stage', () => {
 		const stage = astq.query(
 			ast,
@@ -120,6 +123,7 @@ describe('Module 01 - Game Loop', () => {
 			'Are you providing the id of `canvas` to the Stage constructor?'
 		);
 	});
+	//Check that the shape was properly added to the stage
 	it('Create a shape @ship-shape', () => {
 		const ship = astq.query(
 			ast,
